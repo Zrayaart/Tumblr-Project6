@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         fetchPosts()
 
     }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -78,4 +79,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         }
         session.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailViewController = segue.destination as? DetailViewController else { return }
+        guard let selectedIndexPath = tableView?.indexPathForSelectedRow else { return }
+        let selectedPost = posts[selectedIndexPath.row]
+        detailViewController.post = selectedPost
+    }
+
 }
+
