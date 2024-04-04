@@ -15,7 +15,7 @@ The following **required** functionality is completed:
 
 ## Video Walkthrough
 
-https://youtube.com/shorts/ASRyP4zbm1w
+https://youtube.com/shorts/DDc2JxZQk5s
 
 ## Notes
 
